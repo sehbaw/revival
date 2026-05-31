@@ -1,0 +1,328 @@
+/******************************************************************************
+START Glitch hello-app default styles
+
+The styles in this section do some minimal CSS resets, set default fonts and 
+colors, and handle the layout for our footer and "Remix on Glitch" button. If
+you're new to CSS they may seem a little complicated, but you can scroll down
+to this section's matching END comment to see page-specific styles.
+******************************************************************************/
+
+
+/* 
+  The style rules specify elements by type and by attributes such as class and ID
+  Each section indicates an element or elements, then lists the style properties to apply
+  See if you can cross-reference the rules in this file with the elements in index.html
+*/
+
+/* Our default values set as CSS variables */
+:root {
+  --color-bg: #0FFFF;
+  --color-text-main: #000000;
+  --color-text-header: #2800FF;
+  --color-primary: #FFFF00;
+  --wrapper-height: 87vh;
+  --image-max-width: 300px;
+  --image-margin: 3rem;
+  --font-family: "HK Grotesk";
+  --font-family-header: "HK Grotesk";
+  --blue: #245DDA;
+}
+
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Import fonts */
+@font-face {
+  font-family: HK Grotesk;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+    format("opentype");
+}
+@font-face {
+  font-family: HK Grotesk;
+  font-weight: bold;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+    format("opentype");
+}
+
+
+body {
+  font-family: HK Grotesk, monospace;
+ /* background-color: var(--color-bg); */
+}
+
+
+/* footer {
+  position: fixed;
+  bottom: 0;
+  padding:0px;
+  width: 300px;
+  width:1000px;
+  
+}*/
+
+
+/* general styling */
+
+/*@media queries (max-width: 768px) {
+  .image-container {
+    width: 100%;
+    justify-content: flex-start; /* Adjust alignment for smaller screens 
+  }
+}
+*/
+
+/* note: old background color: #fae8e8 */
+body {
+  background-color: #90D5FF;
+  margin-top: 10%;
+  padding: 0; /* Remove default padding */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: flex-start; /* Align items to the top */
+  align-items: center; /* Center the content horizontally */
+  min-height: 100vh; /* Ensure the body takes up the full viewport height */
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 20;
+  text-align: left;
+  
+}
+
+
+    
+    h1{
+      font-size:30px;
+      color:black;
+      font-family: sans-serif;
+      margin-bottom: 10px;
+    }
+
+    h3{
+      font-size:18px;
+      color:black;
+    }
+    
+    h4{
+      font-size:15px;
+
+    }
+    
+    p{
+      font-size:14px;
+      line-height: normal;
+      color:white;
+      margin-top: 10px;
+    }
+
+    a {
+    color: blue; /* Link color for unvisited links */
+    }
+
+    a:visited {
+    color: purple; /* Link color for visited links */
+    }
+
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px; /* this is the horizontal scrollbar */
+  background: transparent;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: transparent;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: red; 
+}
+
+/* grid styling */
+
+.image-container {
+  width: 80%; /* Take up the entire body width */
+  display: flex;
+  height:auto;
+  position:relative;
+  /*flex-wrap: wrap;
+  gap: 50px;
+  padding: 100px;
+  /*justify-content: center; /* Center the images horizontally */
+}
+
+.image-wrapper {
+  width: 16%; /* Adjust the width for your desired number of columns and gap */
+  position: absolute;
+  margin: 2px;
+  /*box-sizing: border-box;*/
+}
+
+.image-wrapper img {
+  height: auto; /* Set the height to 200px */
+  width: 80%; /* Ensure the image fills the container width */
+}
+
+.image-wrapper:hover img{
+  transform: scale(1.1); /* Scale up the image on hover */
+}
+
+mark {
+  background-color: #3B77BC;
+  color:white;
+}
+/* popup styling */
+.popup {
+  display: none;
+  position: absolute;
+  border-radius: 10px;
+  top: 20%;
+  left: 30%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 90%;
+  background-color: #fcf5ca;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: move;
+  z-index: 9999;
+}
+
+.popup.open {
+  display: block;
+  z-index: 9999;
+  width:500px;
+  height:500px;
+}
+
+.popup-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.popup-content p {
+  text-align: left;
+}
+.popup-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  background-color: #fcf5ca;
+  border: none;
+  cursor: pointer;
+  float: right;
+}
+
+/* individual styling */
+
+
+#popup1 {
+  /* worm */
+  width: 200px;
+  height: auto;
+  top: 4%;
+  left: 20%;
+}
+
+
+#popup2 {
+  /* blue notebook */
+  width: 300px;
+  height: auto;
+}
+
+
+
+#popup3 {
+  /* fish */
+  width: 300px;
+  height: auto;
+}
+
+
+
+#popup4 {
+  /* heart */
+  width: 200px;
+  height: auto;
+}
+
+
+
+#popup8 {
+  /* todo hammer */
+  width: 300px;
+  height: auto;
+}
+
+
+#popup10 {
+  /* ants */
+  width: 250px;
+  height: auto;
+}
+
+
+
+footer {
+  position:fixed;
+}
+
+.taskbar {
+  left:0;
+  right:0;
+  bottom:0;
+  position: fixed;
+  background-color: var(--blue);
+  border-top: 0.5px solid #FFFFFF;
+  height: 30px;
+  
+}
+
+footer .start-button {
+  position:absolute;
+  bottom:0;
+  left:0;
+  height:100%;
+}
+
+#home-logo {
+  right:0;
+  width:5px;
+  height:5px;
+}
+
+.sticky-note {
+  height:200px;
+  width:200px;
+  background-color:#FFFF00;
+  align-items: center;
+}
+
+.sticky-note .corner-button {
+  top:0;
+  left:0;
+  height:30px;
+  width:30px;
+
+
+}

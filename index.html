@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 
+      This is an HTML comment
+      You can write text in a comment and the content won't be visible in the page
+    -->
+    <style> 
+     body {
+      background-image: url(imgs/frutiger-aero-background.png);
+      background-size: cover;
+      margin:0;
+      width:100vh;
+      height:100vh;
+      }
+      
+      img {  height: auto; 
+    width: auto; 
+    max-width: 10vh; 
+    max-height: 10vh;
+  
+  }
+      
+      p {
+        color:white;
+      }
+   
+    
+    </style>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+   
+
+    <!--
+      This is the page head - it contains info the browser uses
+      Like the title, which appears on the browser tab but not inside the page
+      Further down you'll see the content that displays in the page
+    -->
+    <title>revival</title>
+
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- The website JavaScript file -->
+
+  </head>
+  <body>
+
+<div class="image-container">
+
+      </div>
+</div>
+</div>
+  <div class="image-wrapper">
+      <a href="files/Leapster.pdf">
+            <img src="imgs/devices/leapster.jpg"> 
+
+    </a>
+    <p>
+      <mark> leapster guide </mark>
+  </p>
+  </div>
+
+
+   <div class="image-wrapper">
+      <a href="https://www.nintendo3dscentral.com/phpBB3/">
+            <img src="imgs/devices/3ds.png"> 
+
+    </a>
+    <br>
+    <br>
+    <p>
+      <mark> 3DS </mark>
+  </p>
+  </div>
+
+  <div class="image-wrapper">
+      <a href="">
+            <img src="">
+    </a>
+    <br>
+    <p>
+      <mark>  </mark>
+  </p>
+  
+  </div>
+
+  <div class="image-wrapper">
+      <a href="https://www.ebay.com/itm/305607911268?_skw=%22Nokia+1202.%22&itmmeta=01KSG2GQSJS3SHH6MJ0XSVH4FN&hash=item4727a6a764:g:bK0AAOSw2vBmZAvr&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xARnVeTRabiIQ5jQdAyNiGhBSFo70s9TgncTN7YO5dgCX7xwawKl1E2Ii9dg1epCnv8lt6RQ9HftwCvUTW%2BeIlGIV9gx%2BhlaqLHexbOlOtdUrQAkaaz4Z0OhjO8%2FXi0nvkuZS%2FdAvcxe4VsSPd8ZNhR%2FssW9%2Bc2fs%2B4J4Lx7dPPK5OoxQ%2Fc2w3KGabhkDY67kabZyBT6pNKk3TmZ4tdIMyxWKfRSDjYRczk5%2FyvZq%2FuXCMqcHux6o9E1R8ys8dGvIuWkadHSTsGTufTAQ9b%2BhProL%2B5j7I1U3X8s1%2Bo2Aqgcg%3D%3D%7Ctkp%3ABFBM9vzCgsxn">
+            <img src="imgs/devices/nokia.jpg">
+    </a>
+    <br>
+    <p>
+      <mark> nokia 1202 </mark>
+  </p>
+  
+  </div>
+
+   <div class="image-wrapper">
+      <a href="">
+            <img src="">
+    </a>
+    <br>
+    <p>
+      <mark> iphone 5s </mark>
+  </p>
+  
+  </div>
+
+    
+   <div class="sticky-note">
+         <button class="corner-button">X</button>
+    <br>
+    They consumed my childhood and although I am left depleted and mortal, despite humanity’s
+best efforts the e-waste objects themselves refuse mortality or dissolution.
+  
+  
+  </div>
+    </div>
+
+  
+  
+<!--load jquery libraries-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+ <!--<script src="index.js"></script>-->
+
+ <script>
+  //want to adjust image size 
+  document.querySelectorAll('.image-wrapper').forEach(el => {
+    el.style.left = Math.random() * 90 + '%';
+    el.style.top = Math.random() * 90 + '%';
+  });
+  //
+ document.querySelectorAll('.sticky-note').forEach(sn => {
+    sn.style.left = Math.random() * 50 + '%';
+    sn.style.top = Math.random() * 50 + '%';
+  });
+//want to randomize the size here...is the math going to math
+document.querySelectorAll('img').forEach(img => {
+  img.style.height = Math.round(Math.random() * 100 + 10) + 'px';
+  img.style.width = Math.round(Math.random() * 100 + 10) + 'px';
+});
+ // document.querySelectorAll()
+</script>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+  <script src="script.js"></script>
+  <!--  <footer><img src="https://cdn.glitch.global/77b1a84b-d3b9-4fba-a07f-d65fc70e8347/windows-xp-start-menu-icon-8-removebg-preview.png?v=1747679983807" width="5" height="5"  alt="windows-xp start button"></footer>-->
+    <footer class="taskbar">
+   <img src="imgs/windowsxp_transparent.webp" class="start-button">
+  </footer>
+
+  </body>
+
+        
+</html>
